@@ -4,7 +4,7 @@
   "description": "",
   "main": "api.js",
   "scripts": {
-    "nodemon_start": "nodemon ./api.js localhost"
+    "nodemon_start": "nodemon ./api.js"
   },
   "author": "",
   "license": "ISC",

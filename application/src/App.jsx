@@ -18,7 +18,7 @@ function App() {
     // Update the document title using the browser API
     changeURL(url);
     getAPIData(apiSearch);
-  }, [apiData]);
+  }, [url, apiData]);
 
 
   const changeURL = (url) => {

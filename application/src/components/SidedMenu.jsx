@@ -8,7 +8,7 @@ function SidedMenu({urls, menuSide, urlChanger}) {
     });
 
     return (
-        <div className={`h-screen bg-cyan-700 text-white fixed top-0 bottom-0 w-60 ${menuSide}-0`}>
+        <div className={`h-screen bg-cyan-700 text-white fixed top-0 w-60 ${menuSide}-0`}>
            <ul className="flex flex-col justify-center justify-items-center content-between items-center">
                 {generatedUrls}
             </ul>

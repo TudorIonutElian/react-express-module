@@ -2,6 +2,8 @@ import Header from './components/Header';
 import Items from './components/Items';
 import SidedMenu from "./components/SidedMenu";
 import urls from './data/url';
+import config from './data/config';
+import axios from "axios";
 
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -47,21 +49,20 @@ function App() {
   }
 
   const getAPIData = (apiSearch) => {
-    console.log(apiSearch)
+    axios.get(`${config.API_URL}/${apiSearch}`).then((data)=> {setApiData(data.data)});
   }
   
 
   const setURLOnClick = (e, newUrl) => {
     e.preventDefault();
     setUrl(newUrl);
-    console.log(menuSide)
   }
 
   console.log(url)
   return (
     <div className="App h-screen">
       <Header urls={urls} urlChanger={setURLOnClick}/>
-      <Items />
+      <Items itemsApiData={apiData}/>
       <SidedMenu urls={urls} menuSide={menuSide} urlChanger={setURLOnClick}/>
     </div>
   )

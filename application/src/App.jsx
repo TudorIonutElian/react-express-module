@@ -1,14 +1,15 @@
 import Header from './components/Header';
 import Items from './components/Items';
-import SidedMenu from "./components/SidedMenu"
+import SidedMenu from "./components/SidedMenu";
+import urls from './data/url';
 
 function App() {
 
   return (
     <div className="App h-screen">
-      <Header />
+      <Header urls={urls}/>
       <Items />
-      <SidedMenu />
+      <SidedMenu urls={urls}/>
     </div>
   )
 }

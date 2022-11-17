@@ -58,7 +58,6 @@ function App() {
     setUrl(newUrl);
   }
 
-  console.log(url)
   return (
     <div className="App h-screen">
       <Header urls={urls} urlChanger={setURLOnClick}/>

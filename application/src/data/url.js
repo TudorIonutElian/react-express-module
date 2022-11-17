@@ -1,18 +1,18 @@
 const urls = [
     {
-        href: "http://localhost:8080/",
+        href: "/",
         text: "Home"
     },
     {
-        href: "http://localhost:8080/?modules=newlist",
+        href: "/?modules=newlist",
         text: "NewList (API2)"
     },
     {
-        href: "http://localhost:8080/?modules=changesidebar",
+        href: "/?modules=changesidebar",
         text: "Change Sidebar (API1)"
     },
     {
-        href: "http://localhost:8080/?modules=changesidebar",
+        href: "/?modules=changesidebar.newlist",
         text: "Change Sidebar + New List (API2)"
     },
 ];

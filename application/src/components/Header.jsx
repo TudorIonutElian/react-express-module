@@ -1,10 +1,12 @@
 import React from "react";
+import { useState } from "react";
 
-function Header({urls}) {
+function Header({urls, urlChanger}) {
+
     const generatedUrls = urls.map((url, index) => {
         return (
             <li className="bg-white p-2 rounded-md mx-1" key={index}>
-                <a href={url.href}>{url.text}</a>
+                <a href={url.href} onClick={()=> {urlChanger(event, url.href)}}>{url.text}</a>
             </li>
         );
     });

@@ -1,11 +1,16 @@
 // Set expres server
 const express = require('express')
-const app = express()
+const app = express();
+const cors = require('cors');
 const port = 3001;
 
 // Get modules data to be exported
 const api1Data = require("./data/api1-data.json") ;
 const api2Data = require("./data/api2-data.json") ;
+
+app.use(cors({
+  origin: '*'
+}));
 
 
 // define API 1 route

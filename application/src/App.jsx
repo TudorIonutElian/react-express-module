@@ -8,12 +8,18 @@ import { useEffect } from 'react';
 
 function App() {
   const [url, setUrl] = useState("/");
-  const [apiSearch, setApiSearch] = useState("");
+  const [apiSearch, setApiSearch] = useState("api1");
   const [menuSide, setMenuSide] = useState("left");
   const [apiData, setApiData] = useState([]);
   
   useEffect(() => {
     // Update the document title using the browser API
+    changeURL(url);
+    getAPIData(apiSearch);
+  }, [url]);
+
+
+  const changeURL = (url) => {
     switch (url) {
       case urls[0].href:
         setApiSearch("api1");
@@ -38,8 +44,11 @@ function App() {
       default:
         break;
     }
-  }, [url]);
+  }
 
+  const getAPIData = (apiSearch) => {
+    console.log(apiSearch)
+  }
   
 
   const setURLOnClick = (e, newUrl) => {

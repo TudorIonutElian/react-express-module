@@ -1,3 +1,5 @@
+import config from "../data/config";
+
 function SidedMenu({urls, menuSide, urlChanger}) {
     const generatedUrls = urls.map((url, index) => {
         return (
@@ -7,8 +9,10 @@ function SidedMenu({urls, menuSide, urlChanger}) {
         );
     });
 
+    const menuCSSClass = config.MENU_CSS + " " + ( menuSide === "left" ? config.MENU_LEFT_CSS: config.MENU_RIGHT_CSS);
+
     return (
-        <div className={menuSide === "left" ? "h-screen bg-cyan-700 text-white fixed top-0 w-60 left-0": "h-screen bg-cyan-700 text-white fixed top-0 w-60 right-0"}>
+        <div className={menuCSSClass}>
            <ul className="flex flex-col justify-center justify-items-center content-between items-center">
                 {generatedUrls}
             </ul>

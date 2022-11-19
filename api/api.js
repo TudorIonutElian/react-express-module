@@ -25,5 +25,5 @@ app.get('/api2', (req, res) => {
 
 
 app.listen(port, () => {
-  console.log(`Intouch Games API listening on port: ${port}`)
+  console.log(`Games API listening on port: ${port}`)
 })
